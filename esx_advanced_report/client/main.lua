@@ -21,8 +21,6 @@ RegisterCommand('report', function(source, args)
       TriggerServerEvent('esx_advanced_report:sendAvailableStaffReport', ids, args)
     end
 
-    TriggerServerEvent("esx_advanced_report:sendDiscordReport", args)
-
     Citizen.Wait(Config.ReportCooldown)
     reportCooldown = false
   else
